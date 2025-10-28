@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Profesional - CV</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body data-tema="claro">
+    
+    <!-- ==================== BOTÓN DE CONFIGURACIÓN ==================== -->
+    <button class="boton-configuracion" onclick="togglePanel(this)" aria-label="Abrir configuración">
+        <i class="bi bi-gear-fill" style="font-size: 1.5rem;"></i>
+    </button>
+
+    <!-- ==================== PANEL DE CONFIGURACIÓN ==================== -->
+    <div class="panel-configuracion" id="panelConfig">
+        <h3>
+            <span data-traducir="configuracion">Configuración</span>
+            <button class="boton-cerrar-panel" onclick="cerrarPanel(this)" aria-label="Cerrar panel">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </h3>
+
+        <!-- Cambiar tema -->
+        <div class="opcion-configuracion">
+            <label for="selectorTema" data-traducir="tema">Tema</label>
+            <select id="selectorTema" onchange="cambiarTema(this)">
+                <option value="claro" data-traducir="temaClaro">Claro</option>
+                <option value="oscuro" data-traducir="temaOscuro">Oscuro</option>
+            </select>
+        </div>
+
+        <!-- Cambiar idioma -->
+        <div class="opcion-configuracion">
+            <label for="selectorIdioma" data-traducir="idioma">Idioma</label>
+            <select id="selectorIdioma" onchange="cambiarIdioma(this)">
+                <option value="es" data-traducir="espanol">Español</option>
+                <option value="en" data-traducir="ingles">English</option>
+            </select>
+        </div>
+
+        <!-- Tamaño de fuente -->
+        <div class="opcion-configuracion">
+            <label for="tamanoFuente" data-traducir="tamanoFuente">Tamaño de Fuente</label>
+            <select id="tamanoFuente" onchange="cambiarTamanoFuente(this)">
+                <option value="14px" data-traducir="pequeno">Pequeño</option>
+                <option value="16px" selected data-traducir="normal">Normal</option>
+                <option value="18px" data-traducir="grande">Grande</option>
+                <option value="20px" data-traducir="muyGrande">Muy Grande</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- ==================== BARRA DE NAVEGACIÓN ==================== -->
+    <nav class="navbar navbar-expand-lg navbar-personalizada">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#inicio" style="color: var(--color-primario);">
+                Mi Portfolio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio" data-traducir="inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#acerca" data-traducir="acerca">Acerca</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios" data-traducir="servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#habilidades" data-traducir="habilidades">Habilidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#educacion" data-traducir="educacion">Educación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experiencia" data-traducir="experiencia">Experiencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portafolio" data-traducir="portafolio">Portafolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto" data-traducir="contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== SECCIÓN INICIO ==================== -->
+    <section id="inicio">
+        <div class="container">
+            <div class="hero-contenido">
+                <h1 data-traducir="bienvenida">¡Hola! Soy Marcell</h1>
+                <p data-traducir="descripcionHero">Desarrollador Web junior | Creando experiencias digitales excepcionales</p>
+                <a href="#portafolio" class="boton-cta" 
+                   onmouseover="efectoHoverBoton(this, true)" 
+                   onmouseout="efectoHoverBoton(this, false)"
+                   data-traducir="verProyectos">
+                    Ver mis proyectos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN ACERCA DE MÍ ==================== -->
+    <section id="acerca">
+        <div class="container">
+            <h2 class="titulo-seccion" data-traducir="acercaDeMi">Acerca de Mí</h2>
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center mb-4">
+                    <img src="https://via.placeholder.com/250" alt="Foto de perfil" class="foto-perfil">
+                </div>
+                <div class="col-md-8">
+                    <div class="tarjeta-personalizada">
+                        <h3 class="mb-3" data-traducir="perfilProfesional">Perfil Profesional</h3>
+                        <p data-traducir="biografiaTexto">
+                            Soy un estudiante apasionado de programación web del Liceo Comercial Vicente Huidobro. 
+                            Me especializo en crear sitios web modernos, responsivos y funcionales utilizando las 
+                            últimas tecnologías. Mi objetivo es convertirme en un desarrollador Full Stack y 
+                            contribuir a proyectos innovadores que generen impacto positivo.
+                        </p>
+                        <p data-traducir="misionPersonal">
+                            Mi misión es aprender constantemente y aplicar mis conocimientos para resolver problemas 
+                            reales mediante la tecnología.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN SERVICIOS ==================== -->
+    <section id="servicios">
+        <div class="container">
+            <h2 class="titulo-seccion" data-traducir="misServicios">Mis Servicios</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="tarjeta-personalizada text-center" 
+                         onmouseover="efectoHoverCard(this)" 
+                         onmouseout="efectoSalirCard(this)">
+                        <i class="bi bi-code-slash" style="font-size: 3rem; color: var(--color-primario);"></i>
+                        <h4 class="mt-3" data-traducir="desarrolloWeb">Desarrollo Web</h4>
+                        <p data-traducir="desarrolloWebDesc">Creación de sitios web responsivos y modernos con HTML, CSS y JavaScript.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="tarjeta-personalizada text-center" 
+                         onmouseover="efectoHoverCard(this)" 
+                         onmouseout="efectoSalirCard(this)">
+                        <i class="bi bi-palette" style="font-size: 3rem; color: var(--color-primario);"></i>
+                        <h4 class="mt-3" data-traducir="disenoUI">Diseño UI/UX</h4>
+                        <p data-traducir="disenoUIDesc"></p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="tarjeta-personalizada text-center" 
+                         onmouseover="efectoHoverCard(this)" 
+                         onmouseout="efectoSalirCard(this)">
+                        <i class="bi bi-gear" style="font-size: 3rem; color: var(--color-primario);"></i>
+                        <h4 class="mt-3" data-traducir="mantenimiento">Mantenimiento</h4>
+                        <p data-traducir="mantenimientoDesc">Actualización y optimización continua de sitios web existentes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN CLIENTES ==================== -->
+    <section id="clientes" style="min-height: auto; padding: 3rem 0;">
+        <div class="container">
+            <h2 class="titulo-seccion" data-traducir="clientes">Clientes</h2>
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="tarjeta-personalizada">
+                        <p data-traducir="clienteEducativo">Proyecto Educativo Liceo</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="tarjeta-personalizada">
+                        <p data-traducir="clienteComunidad">Centro de Alumnos</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="tarjeta-personalizada">
+                        <p data-traducir="clienteFreelance">Proyectos Freelance</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="tarjeta-personalizada">
+                        <p data-traducir="clientePersonal">Proyectos Personales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN HABILIDADES ==================== -->
+    <section id="habilidades">
+        <div class="container">
+            <h2 class="titulo-seccion" data-traducir="habilidades">Habilidades</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="mb-4" data-traducir="habilidadesTecnicas">Habilidades Técnicas</h4>
+                    <div class="skill-item">
+                        <div class="skill-nombre">
+                            <span>HTML5</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="barra-progreso">
+                            <div class="progreso-relleno" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-nombre">
+                            <span>CSS3 / Bootstrap</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="barra-progreso">
+                            <div class="progreso-relleno" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-nombre">
+                            <span>JavaScript</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="barra-progreso">
+                            <div class="progreso-relleno" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-nombre">
+                            <span>Git / GitHub</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="barra-progreso">
+                            <div class="progreso-relleno" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="mb-4" data-traducir="habilidadesBlandas">Habilidades Blandas</h4>
+                    <div class="tarjeta-personalizada mb-3">
+                        <i class="bi bi-people-fill me-2" style="color: var(--color-primario);"></i>
+                        <span data-traducir="trabajoEquipo">Trabajo en equipo</span>
+                    </div>
+                    <div class="tarjeta-personalizada mb-3">
+                        <i class="bi bi-lightbulb-fill me-2" style="color: var(--color-primario);"></i>
+                        <span data-traducir="creatividad">Creatividad</span>
+                    </div>
+                    <div class="tarjeta-personalizada mb-3">
+                        <i class="bi bi-clock-fill me-2" style="color: var(--color-primario);"></i>
+                        <span data-traducir="gestionTiempo">Gestión del tiempo</span>
+                    </div>
+                    <div class="tarjeta-personalizada mb-3">
+                        <i class="bi bi-chat-dots-fill me-2" style="color: var(--color-primario);"></i>
+                        <span data-traducir="comunicacion">Comunicación efectiva</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN EDUCACIÓN ==================== -->
+    <section id="educacion">
+        <div class="container">
+            <h2 class="titulo-seccion" data-traducir="educacion">Educación</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="tarjeta-personalizada">
+                        <h4 data-traducir="educacionSecundaria">Educación Secundaria Técnico Profesional</h4>
+                        <p class="text-muted">Liceo Comercial Vicente Huidobro</p>
+                        <p data-traducir="fechaEducacion">2022 - 2025</p>
+                        <p data-traducir="especialidadProgramacion">Especialidad: Programación y Desarrollo Web</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="tarjeta-personalizada">
+                        <h4 data-traducir="cursosComplementarios">Cursos Complementarios</h4>
+                        <ul>
+                            <li data-traducir="cursoHTML">Desarrollo Web con HTML y CSS</li>
+                            <li data-traducir="cursoJS">JavaScript Moderno - ES6+</li>
+                            <li data-traducir="cursoBootstrap">Bootstrap 5 Framework</li>
+                            <li data-traducir="cursoGit">Control de versiones con Git</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN CERTIFICACIONES ==================== -->
+    <section id="certificaciones" style="min-height: auto; padding: 3rem 0;">
+        <div class="container">
+            <h2 class="titulo-seccion" data-traducir="certificaciones">Certificaciones</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="tarjeta-personalizada">
+                        <i class="bi bi-award-fill" style="font-size: 2rem; color: var(--color-primario);"></i>
+                        <h5 class="mt-3" data-traducir="certHTML">Certificación HTML5 & CSS3</h5>
+                        <p class="text-muted" data-traducir="institucionCert1">Institución: FreeCodeCamp</p>
+                        <p data-traducir="fechaCert1">Fecha: Enero 2024</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="tarjeta-personalizada">
+                        <i class="bi bi-award-fill" style="font-size: 2rem; color: var(--color-primario);"></i>
+                        <h5 class="mt-3" data-traducir="certJS">Certificación JavaScript</h5>
+                        <p class="text-muted" data-traducir="institucionCert2">Institución: Codecademy</p>
+                        <p data-traducir="fechaCert2">Fecha: Marzo 2024</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="tarjeta-personalizada">
+                        <i class="bi bi-award-fill" style="font-size: 2rem; color: var(--color-primario);"></i>
+                        <h5 class="mt-3" data-traducir="certBootstrap">Certificación Bootstrap</h5>
+                        <p class="text-muted" data-traducir="institucionCert3">Institución: Udemy</p>
+                        <p data-traducir="fechaCert3">Fecha: Mayo 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN EXPERIENCIA ==================== -->
+    <section id="experiencia">
+        <div class="container">
+            <h2 class="titulo-seccion" data-traducir="experiencia">Experiencia</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="tarjeta-personalizada">
+                        <h4 data-traducir="practicaProfesional">Práctica Profesional</h4>
+                        <p class="text-muted" data-traducir="empresaPractica">Empresa Local - Desarrollo Web</p>
+                        <p data-traducir="fechaPractica">Junio 2024 - Agosto 2024</p>
+                        <ul>
+                            <li data-traducir="actividadPractica1">Desarrollo de sitio web corporativo</li>
+                            <li data-traducir="actividadPractica2">Mantenimiento de aplicaciones web</li>
+                            <li data-traducir="actividadPractica3">Colaboración con equipo de diseño</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="tarjeta-personalizada">
+                        <h4 data-traducir="proyectoEscolar">Proyectos Escolares</h4>
+                        <p class="text-muted" data-traducir="liceoProyecto">Liceo Comercial Vicente Huidobro</p>
+                        <p data-traducir="fechaProyectoEscolar">2023 - 2024</p>
+                        <ul>
+                            <li data-traducir="proyectoSitio">Desarrollo de sitio web para el liceo</li>
+                            <li data-traducir="proyectoTienda">Sistema de gestión escolar</li>
+                            <li data-traducir="proyectoPortafolio">Portafolios digitales para compañeros</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN REFERENCIAS ==================== -->
+    <section id="referencias" style="min-height: auto; padding: 3rem 0;">
+        <div class="container">
+            <h2 class="titulo-seccion" data-traducir="referencias">Referencias</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="tarjeta-personalizada text-center">
+                        <i class="bi bi-person-circle" style="font-size: 3rem; color: var(--color-primario);"></i>
+                        <h5 class="mt-3">Prof. Dany</h5>
+                        <p class="text-muted" data-traducir="profesorProgramacion">Profesor de Programación Web</p>
+                        <p data-traducir="contactoReferencia1">Correo: profesor@liceo.cl</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="tarjeta-personalizada text-center">
+                        <i class="bi bi-person-circle" style="font-size: 3rem; color: var(--color-primario);"></i>
+                        <h5 class="mt-3" data-traducir="mentorTecnico">Mentor Técnico</h5>
+                        <p class="text-muted" data-traducir="supervisorPractica">Supervisor de Práctica</p>
+                        <p data-traducir="contactoReferencia2">Correo: mentor@empresa.cl</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="tarjeta-personalizada text-center">
+                        <i class="bi bi-person-circle" style="font-size: 3rem; color: var(--color-primario);"></i>
+                        <h5 class="mt-3" data-traducir="coordinadorTP">Coordinador TP</h5>
+                        <p class="text-muted" data-traducir="coordinadorEspecialidad">Coordinador de Especialidad</p>
+                        <p data-traducir="contactoReferencia3">Correo: coordinador@liceo.cl</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN PORTAFOLIO ==================== -->
+    <section id="portafolio">
+        <div class="container">
+            <h2 class="titulo-seccion" data-traducir="portafolio">Portafolio de Proyectos</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <a href="https://github.com/tuusuario/proyecto1" target="_blank" style="text-decoration: none;">
+                        <div class="tarjeta-proyecto">
+                            <img src="https://via.placeholder.com/400x250/2563eb/ffffff?text=Proyecto+1" alt="Proyecto 1">
+                            <div class="overlay-proyecto">
+                                <h4 data-traducir="proyecto1Titulo">Sitio Web Corporativo</h4>
+                                <p data-traducir="proyecto1Desc">Landing page moderna y responsiva</p>
+                                <i class="bi bi-github" style="font-size: 2rem;"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="https://github.com/tuusuario/proyecto2" target="_blank" style="text-decoration: none;">
+                        <div class="tarjeta-proyecto">
+                            <img src="https://via.placeholder.com/400x250/1e40af/ffffff?text=Proyecto+2" alt="Proyecto 2">
+                            <div class="overlay-proyecto">
+                                <h4 data-traducir="proyecto2Titulo">Aplicación To-Do</h4>
+                                <p data-traducir="proyecto2Desc">Gestión de tareas con JavaScript</p>
+                                <i class="bi bi-github" style="font-size: 2rem;"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="https://github.com/tuusuario/proyecto3" target="_blank" style="text-decoration: none;">
+                        <div class="tarjeta-proyecto">
+                            <img src="https://via.placeholder.com/400x250/3b82f6/ffffff?text=Proyecto+3" alt="Proyecto 3">
+                            <div class="overlay-proyecto">
+                                <h4 data-traducir="proyecto3Titulo">Portfolio Fotográfico</h4>
+                                <p data-traducir="proyecto3Desc">Galería con Bootstrap</p>
+                                <i class="bi bi-github" style="font-size: 2rem;"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="https://github.com/tuusuario/proyecto4" target="_blank" style="text-decoration: none;">
+                        <div class="tarjeta-proyecto">
+                            <img src="https://via.placeholder.com/400x250/60a5fa/ffffff?text=Proyecto+4" alt="Proyecto 4">
+                            <div class="overlay-proyecto">
+                                <h4 data-traducir="proyecto4Titulo">Blog Personal</h4>
+                                <p data-traducir="proyecto4Desc">Sitio con sistema de artículos</p>
+                                <i class="bi bi-github" style="font-size: 2rem;"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="https://github.com/tuusuario/proyecto5" target="_blank" style="text-decoration: none;">
+                        <div class="tarjeta-proyecto">
+                            <img src="https://via.placeholder.com/400x250/2563eb/ffffff?text=Proyecto+5" alt="Proyecto 5">
+                            <div class="overlay-proyecto">
+                                <h4 data-traducir="proyecto5Titulo">Calculadora Web</h4>
+                                <p data-traducir="proyecto5Desc">Calculadora interactiva con JS</p>
+                                <i class="bi bi-github" style="font-size: 2rem;"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="https://github.com/tuusuario/proyecto6" target="_blank" style="text-decoration: none;">
+                        <div class="tarjeta-proyecto">
+                            <img src="https://via.placeholder.com/400x250/1e40af/ffffff?text=Proyecto+6" alt="Proyecto 6">
+                            <div class="overlay-proyecto">
+                                <h4 data-traducir="proyecto6Titulo">Dashboard Admin</h4>
+                                <p data-traducir="proyecto6Desc">Panel de administración</p>
+                                <i class="bi bi-github" style="font-size: 2rem;"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN ORGANIZACIONES ==================== -->
+    <section id="organizaciones" style="min-height: auto; padding: 3rem 0;">
+        <div class="container">
+            <h2 class="titulo-seccion" data-traducir="organizaciones">Organizaciones</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="tarjeta-personalizada text-center">
+                        <i class="bi bi-building" style="font-size: 2.5rem; color: var(--color-primario);"></i>
+                        <h5 class="mt-3" data-traducir="centroAlumnos">Centro de Alumnos</h5>
+                        <p data-traducir="rolCentro">Miembro Activo</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="tarjeta-personalizada text-center">
+                        <i class="bi bi-code-square" style="font-size: 2.5rem; color: var(--color-primario);"></i>
+                        <h5 class="mt-3" data-traducir="clubProgramacion">Club de Programación</h5>
+                        <p data-traducir="rolClub">Co-fundador</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="tarjeta-personalizada text-center">
+                        <i class="bi bi-heart" style="font-size: 2.5rem; color: var(--color-primario);"></i>
+                        <h5 class="mt-3" data-traducir="voluntariado">Voluntariado</h5>
+                        <p data-traducir="rolVoluntariado">Enseñanza de programación</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="tarjeta-personalizada text-center">
+                        <i class="bi bi-people" style="font-size: 2.5rem; color: var(--color-primario);"></i>
+                        <h5 class="mt-3" data-traducir="comunidadTech">Comunidad Tech Local</h5>
+                        <p data-traducir="rolComunidad">Participante activo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN CONTACTO ==================== -->
+    <section id="contacto">
+        <div class="container">
+            <h2 class="titulo-seccion" data-traducir="contacto">Contacto</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="tarjeta-personalizada">
+                        <h4 class="mb-4" data-traducir="informacionContacto">Información de Contacto</h4>
+                        <div class="mb-3">
+                            <i class="bi bi-envelope-fill me-2" style="color: var(--color-primario);"></i>
+                            <span>marcell25208@gmail.com</span>
+                        </div>
+                        <div class="mb-3">
+                            <i class="bi bi-telephone-fill me-2" style="color: var(--color-primario);"></i>
+                            <span>+56 9 2761 1547</span>
+                        </div>
+                        <div class="mb-3">
+                            <i class="bi bi-geo-alt-fill me-2" style="color: var(--color-primario);"></i>
+                            <span>Santiago, Chile</span>
+                        </div>
+                        <div class="mt-4">
+                            <h5 data-traducir="redesSociales">Redes Sociales</h5>
+                            <a href="https://github.com/Marcell-Figueroa1" target="_blank" class="btn btn-outline-primary me-2 mb-2">
+                                <i class="bi bi-github"></i> GitHub
+                            </a>
+                            <a href="https://linkedin.com/in/tuusuario" target="_blank" class="btn btn-outline-primary me-2 mb-2">
+                                <i class="bi bi-linkedin"></i> LinkedIn
+                            </a>
+                            <a href="https://twitter.com/tuusuario" target="_blank" class="btn btn-outline-primary me-2 mb-2">
+                                <i class="bi bi-twitter"></i> Twitter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="tarjeta-personalizada">
+                        <h4 class="mb-4" data-traducir="enviarMensaje">Enviar Mensaje</h4>
+                        <form class="formulario-contacto" onsubmit="enviarFormulario(event, this)">
+                            <input type="text" placeholder="Nombre completo" required 
+                                   data-traducir-placeholder="nombrePlaceholder">
+                            <input type="email" placeholder="Correo electrónico" required 
+                                   data-traducir-placeholder="correoPlaceholder">
+                            <input type="text" placeholder="Asunto" required 
+                                   data-traducir-placeholder="asuntoPlaceholder">
+                            <textarea rows="5" placeholder="Tu mensaje" required 
+                                      data-traducir-placeholder="mensajePlaceholder"></textarea>
+                            <button type="submit" class="boton-enviar" 
+                                    onmouseover="this.style.transform='scale(1.05)'" 
+                                    onmouseout="this.style.transform='scale(1)'"
+                                    data-traducir="botonEnviar">
+                                Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer style="background-color: var(--color-fondo); padding: 2rem 0; text-align: center; border-top: 1px solid var(--color-borde);">
+        <div class="container">
+            <p>&copy; 2024 Mi Portafolio. <span data-traducir="derechosReservados">Todos los derechos reservados.</span></p>
+            <p><span data-traducir="desarrolladoCon">Desarrollado con</span> ❤️ <span data-traducir="usando">usando HTML, CSS, JavaScript y Bootstrap</span></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/static/js/main.js"> </script>
+
+</body>
+</html>
