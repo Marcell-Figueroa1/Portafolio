@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
+
 <body>
     <!-- Loader -->
     <div class="loader" id="loader">
@@ -55,8 +57,8 @@
             <label class="setting-label">
                 <i class="fas fa-text-height"></i> <span data-i18n="fontSize">Tamaño de Fuente</span>
             </label>
-            <input type="range" class="font-size-control form-range" min="12" max="24" value="16" 
-                   onchange="changeFontSize(this.value)" id="fontSizeSlider">
+            <input type="range" class="font-size-control form-range" min="12" max="24" value="16"
+                onchange="changeFontSize(this.value)" id="fontSizeSlider">
             <div class="text-center mt-2">
                 <span id="fontSizeValue">16px</span>
             </div>
@@ -68,42 +70,42 @@
                 <i class="fas fa-palette"></i> <span data-i18n="theme">Tema de Color</span>
             </label>
             <div class="theme-grid">
-                <button class="theme-btn active" onclick="changeTheme('default')" 
-                        style="background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);"
-                        title="Default" data-theme="default"></button>
-                <button class="theme-btn" onclick="changeTheme('ocean')" 
-                        style="background: linear-gradient(135deg, #06b6d4, #3b82f6, #1e40af);"
-                        title="Ocean" data-theme="ocean"></button>
-                <button class="theme-btn" onclick="changeTheme('forest')" 
-                        style="background: linear-gradient(135deg, #10b981, #059669, #047857);"
-                        title="Forest" data-theme="forest"></button>
-                <button class="theme-btn" onclick="changeTheme('sunset')" 
-                        style="background: linear-gradient(135deg, #f59e0b, #ef4444, #dc2626);"
-                        title="Sunset" data-theme="sunset"></button>
-                <button class="theme-btn" onclick="changeTheme('purple')" 
-                        style="background: linear-gradient(135deg, #a855f7, #7c3aed, #6366f1);"
-                        title="Purple Dream" data-theme="purple"></button>
-                <button class="theme-btn" onclick="changeTheme('cyberpunk')" 
-                        style="background: linear-gradient(135deg, #ff00ff, #00ffff, #ffff00);"
-                        title="Cyberpunk" data-theme="cyberpunk"></button>
-                <button class="theme-btn" onclick="changeTheme('protanopia')" 
-                        style="background: linear-gradient(135deg, #1e3a8a, #fbbf24, #92400e);"
-                        title="Protanopia" data-theme="protanopia"></button>
-                <button class="theme-btn" onclick="changeTheme('deuteranopia')" 
-                        style="background: linear-gradient(135deg, #1e40af, #fcd34d, #78350f);"
-                        title="Deuteranopia" data-theme="deuteranopia"></button>
-                <button class="theme-btn" onclick="changeTheme('tritanopia')" 
-                        style="background: linear-gradient(135deg, #be123c, #fbbf24, #1e3a8a);"
-                        title="Tritanopia" data-theme="tritanopia"></button>
-                <button class="theme-btn" onclick="changeTheme('dark')" 
-                        style="background: linear-gradient(135deg, #1f2937, #374151, #4b5563);"
-                        title="Dark Mode" data-theme="dark"></button>
-                <button class="theme-btn" onclick="changeTheme('light')" 
-                        style="background: linear-gradient(135deg, #f3f4f6, #e5e7eb, #d1d5db);"
-                        title="Light Mode" data-theme="light"></button>
-                <button class="theme-btn" onclick="changeTheme('nord')" 
-                        style="background: linear-gradient(135deg, #5e81ac, #88c0d0, #8fbcbb);"
-                        title="Nord" data-theme="nord"></button>
+                <button class="theme-btn active" onclick="changeTheme('default')"
+                    style="background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);" title="Default"
+                    data-theme="default"></button>
+                <button class="theme-btn" onclick="changeTheme('ocean')"
+                    style="background: linear-gradient(135deg, #06b6d4, #3b82f6, #1e40af);" title="Ocean"
+                    data-theme="ocean"></button>
+                <button class="theme-btn" onclick="changeTheme('forest')"
+                    style="background: linear-gradient(135deg, #10b981, #059669, #047857);" title="Forest"
+                    data-theme="forest"></button>
+                <button class="theme-btn" onclick="changeTheme('sunset')"
+                    style="background: linear-gradient(135deg, #f59e0b, #ef4444, #dc2626);" title="Sunset"
+                    data-theme="sunset"></button>
+                <button class="theme-btn" onclick="changeTheme('purple')"
+                    style="background: linear-gradient(135deg, #a855f7, #7c3aed, #6366f1);" title="Purple Dream"
+                    data-theme="purple"></button>
+                <button class="theme-btn" onclick="changeTheme('cyberpunk')"
+                    style="background: linear-gradient(135deg, #ff00ff, #00ffff, #ffff00);" title="Cyberpunk"
+                    data-theme="cyberpunk"></button>
+                <button class="theme-btn" onclick="changeTheme('protanopia')"
+                    style="background: linear-gradient(135deg, #1e3a8a, #fbbf24, #92400e);" title="Protanopia"
+                    data-theme="protanopia"></button>
+                <button class="theme-btn" onclick="changeTheme('deuteranopia')"
+                    style="background: linear-gradient(135deg, #1e40af, #fcd34d, #78350f);" title="Deuteranopia"
+                    data-theme="deuteranopia"></button>
+                <button class="theme-btn" onclick="changeTheme('tritanopia')"
+                    style="background: linear-gradient(135deg, #be123c, #fbbf24, #1e3a8a);" title="Tritanopia"
+                    data-theme="tritanopia"></button>
+                <button class="theme-btn" onclick="changeTheme('dark')"
+                    style="background: linear-gradient(135deg, #1f2937, #374151, #4b5563);" title="Dark Mode"
+                    data-theme="dark"></button>
+                <button class="theme-btn" onclick="changeTheme('light')"
+                    style="background: linear-gradient(135deg, #f3f4f6, #e5e7eb, #d1d5db);" title="Light Mode"
+                    data-theme="light"></button>
+                <button class="theme-btn" onclick="changeTheme('nord')"
+                    style="background: linear-gradient(135deg, #5e81ac, #88c0d0, #8fbcbb);" title="Nord"
+                    data-theme="nord"></button>
             </div>
         </div>
     </div>
@@ -117,15 +119,18 @@
         </div>
         <div class="header-content container">
             <div class="profile-img animate__animated animate__zoomIn">
-                <img src="https://via.placeholder.com/200" alt="Marcell Jofré Figueroa">
+                <div class="iniciales">MF</div>
             </div>
             <h1 class="header-title">Marcell Jofré De Jesús Figueroa Morán</h1>
             <p class="header-subtitle" data-i18n="role">Técnico Analista Programador</p>
             <p class="header-age"><span data-i18n="age">17 años</span> | Santiago, Chile 🇨🇱</p>
             <div class="elevator-pitch">
-                <i class="fas fa-quote-left" style="color: var(--primary-color); font-size: 24px;"></i>
+                <i class="fas fa-quote-left" style="color: var(--primary-color); font-size: 24px; display: flex;"></i>
                 <p data-i18n="pitch">
-                    Soy estudiante de programación en 2° año de carrera con experiencia práctica en desarrollo web, .NET e IoT. Apasionado por crear soluciones tecnológicas innovadoras, busco constantemente mejorar mis habilidades técnicas y blandas para convertirme en un profesional integral que pueda aportar valor real a proyectos desafiantes.
+                    Soy estudiante de programación en 2° año de carrera con experiencia práctica en desarrollo web, .NET
+                    e IoT. Apasionado por crear soluciones tecnológicas innovadoras, busco constantemente mejorar mis
+                    habilidades técnicas y blandas para convertirme en un profesional integral que pueda aportar valor
+                    real a proyectos desafiantes.
                 </p>
                 <i class="fas fa-quote-right" style="color: var(--primary-color); font-size: 24px; float: right;"></i>
             </div>
@@ -147,7 +152,7 @@
     <section class="section" id="experience">
         <div class="container">
             <h2 class="section-title scroll-animate" data-i18n="experienceTitle">Experiencia</h2>
-            
+
             <div class="experience-card scroll-animate">
                 <div class="experience-icon">
                     <i class="fas fa-project-diagram"></i>
@@ -155,7 +160,10 @@
                 <h3 data-i18n="exp1Title">Líder de Proyecto IoT</h3>
                 <p class="text-secondary mb-2">Liceo Comercial Vate Vicente Huidobro</p>
                 <p data-i18n="exp1Desc">
-                    Colideré un proyecto innovador de IoT desarrollando un dispositivo con Raspberry Pi equipado con múltiples sensores cardiovasculares y respiratorios. Implementé un sistema de monitoreo en tiempo real que visualiza datos vitales en una aplicación web, integrando hardware y software para crear una solución de salud digital completa.
+                    Colideré un proyecto innovador de IoT desarrollando un dispositivo con Raspberry Pi equipado con
+                    múltiples sensores cardiovasculares y respiratorios. Implementé un sistema de monitoreo en tiempo
+                    real que visualiza datos vitales en una aplicación web, integrando hardware y software para crear
+                    una solución de salud digital completa.
                 </p>
                 <div class="mt-3">
                     <span class="project-tag">Raspberry Pi</span>
@@ -173,7 +181,10 @@
                 <h3 data-i18n="exp2Title">Concurso de Innovación General Motors</h3>
                 <p class="text-secondary mb-2">General Motors Innovation Challenge</p>
                 <p data-i18n="exp2Desc">
-                    Participé en equipo en el desafío de innovación de General Motors, donde desarrollamos una propuesta creativa para resolver una problemática de la industria automotriz. Aplicamos metodologías de design thinking y presentamos soluciones tecnológicas viables que demostraron nuestra capacidad de trabajo en equipo e innovación.
+                    Participé en equipo en el desafío de innovación de General Motors, donde desarrollamos una propuesta
+                    creativa para resolver una problemática de la industria automotriz. Aplicamos metodologías de design
+                    thinking y presentamos soluciones tecnológicas viables que demostraron nuestra capacidad de trabajo
+                    en equipo e innovación.
                 </p>
                 <div class="mt-3">
                     <span class="project-tag">Innovación</span>
@@ -190,7 +201,9 @@
                 <h3 data-i18n="exp3Title">Alternancia Profesional - INACAP</h3>
                 <p class="text-secondary mb-2">Instituto Profesional INACAP</p>
                 <p data-i18n="exp3Desc">
-                    Completé una semana intensiva de alternancia en INACAP, donde adquirí conocimientos profesionales y experiencia práctica en entornos educativos de nivel superior. Obtuve certificación que valida mi participación y aprendizaje en esta experiencia formativa.
+                    Completé una semana intensiva de alternancia en INACAP, donde adquirí conocimientos profesionales y
+                    experiencia práctica en entornos educativos de nivel superior. Obtuve certificación que valida mi
+                    participación y aprendizaje en esta experiencia formativa.
                 </p>
                 <div class="mt-3">
                     <span class="project-tag">Certificación</span>
@@ -207,51 +220,75 @@
             <h2 class="section-title scroll-animate" data-i18n="skillsTitle">Habilidades Técnicas</h2>
             <div class="skills-grid">
                 <div class="skill-card scroll-animate">
-                    <div class="skill-icon"><img src="https://www.dropbox.com/scl/fi/6s97q3uj4b7b2pkcxth5s/htmlLogo.png?rlkey=vfw9g2gw7gq0zx31l4wi2ryi2&st=lwn0ah58&raw=1" alt="" class="img-con"></div>
+                    <div class="skill-icon"><img
+                            src="https://www.dropbox.com/scl/fi/6s97q3uj4b7b2pkcxth5s/htmlLogo.png?rlkey=vfw9g2gw7gq0zx31l4wi2ryi2&st=lwn0ah58&raw=1"
+                            alt="" class="img-con"></div>
                     <h4>HTML</h4>
                 </div>
                 <div class="skill-card scroll-animate">
-                    <div class="skill-icon"><img src="https://www.dropbox.com/scl/fi/i0mmljt5i0xkmt6a0ewge/CssLogo.png?rlkey=ppnswiftkmqgwzz8unpjdsjkg&st=7cte7cmh&raw=1" alt="" class="img-con"></div>
+                    <div class="skill-icon"><img
+                            src="https://www.dropbox.com/scl/fi/r821iylmeswsz0dcf2vmw/CssLogo.png?rlkey=maffm7oftuobcqzi4x97yntc3&st=9igv56rs&raw=1"
+                            alt="" class="img-con"></div>
                     <h4>CSS</h4>
                 </div>
                 <div class="skill-card scroll-animate">
-                    <div class="skill-icon"><img src="https://www.dropbox.com/scl/fi/56tsy0qzfket4l08pj1ae/JavaScriptLogo.png?rlkey=5x1pnu2bjemt78nvshv7a4hxu&st=si23hch4&raw=1" alt="" class="img-con"></div>
+                    <div class="skill-icon"><img
+                            src="https://www.dropbox.com/scl/fi/56tsy0qzfket4l08pj1ae/JavaScriptLogo.png?rlkey=5x1pnu2bjemt78nvshv7a4hxu&st=si23hch4&raw=1"
+                            alt="" class="img-con"></div>
                     <h4>JavaScript</h4>
                 </div>
                 <div class="skill-card scroll-animate">
-                    <div class="skill-icon"><img src="https://www.dropbox.com/scl/fi/cw9ulhz5svl3ii5xiu804/vbLogo.png?rlkey=m95uvi6afkv3ifrv1rpe0b0zi&st=kkxreorc&raw=1" alt="" class="img-con"></div>
+                    <div class="skill-icon"><img
+                            src="https://www.dropbox.com/scl/fi/cw9ulhz5svl3ii5xiu804/vbLogo.png?rlkey=m95uvi6afkv3ifrv1rpe0b0zi&st=kkxreorc&raw=1"
+                            alt="" class="img-con"></div>
                     <h4>VB.NET</h4>
                 </div>
                 <div class="skill-card scroll-animate">
-                    <div class="skill-icon"><img src="https://www.dropbox.com/scl/fi/n4hzdnhgqpw6w63qyufy3/cLogo.png?rlkey=emmoet4vm9v6so59wdn701l67&st=3qnq77uc&raw=1" alt="C++" class="img-con"></div>
+                    <div class="skill-icon"><img
+                            src="https://www.dropbox.com/scl/fi/n4hzdnhgqpw6w63qyufy3/cLogo.png?rlkey=emmoet4vm9v6so59wdn701l67&st=3qnq77uc&raw=1"
+                            alt="C++" class="img-con"></div>
                     <h4>C++</h4>
                 </div>
                 <div class="skill-card scroll-animate">
-                    <div class="skill-icon"><img src="https://www.dropbox.com/scl/fi/96sdsvuho7l2eykqydzh2/CsharpLogo.png?rlkey=xlfr700xq1wski94eaif5r3er&st=7eym350t&raw=1" alt="C#" class="img-con"></div>
+                    <div class="skill-icon"><img
+                            src="https://www.dropbox.com/scl/fi/96sdsvuho7l2eykqydzh2/CsharpLogo.png?rlkey=xlfr700xq1wski94eaif5r3er&st=7eym350t&raw=1"
+                            alt="C#" class="img-con"></div>
                     <h4>C#</h4>
                 </div>
                 <div class="skill-card scroll-animate">
-                    <div class="skill-icon"><img src="https://www.dropbox.com/scl/fi/nwye8sil8sqp2klzu47m9/pythonLogo.png?rlkey=nw26fwimappa31095a64mzqbc&st=w28nt8h0&raw=1" alt="" class="img-con"></div>
+                    <div class="skill-icon"><img
+                            src="https://www.dropbox.com/scl/fi/nwye8sil8sqp2klzu47m9/pythonLogo.png?rlkey=nw26fwimappa31095a64mzqbc&st=w28nt8h0&raw=1"
+                            alt="" class="img-con"></div>
                     <h4>Python</h4>
                 </div>
                 <div class="skill-card scroll-animate">
-                    <div class="skill-icon"><img src="https://www.dropbox.com/scl/fi/i0g6jkq3fhhix9digm6zb/vbaLogo.png?rlkey=l1572a56pk314fuppykyk9qyc&st=6n7cgirh&raw=1" alt="" class="img-con"></div>
+                    <div class="skill-icon"><img
+                            src="https://www.dropbox.com/scl/fi/i0g6jkq3fhhix9digm6zb/vbaLogo.png?rlkey=l1572a56pk314fuppykyk9qyc&st=6n7cgirh&raw=1"
+                            alt="" class="img-con"></div>
                     <h4>VBA</h4>
                 </div>
                 <div class="skill-card scroll-animate">
-                    <div class="skill-icon"><img src="https://www.dropbox.com/scl/fi/n3sf0cwycdacfloqwi1s4/luaLogo.png?rlkey=u5ckc3nhwl35jzqlqid0r1qh1&st=ioe7glva&raw=1" alt="" class="img-con"></div>
+                    <div class="skill-icon"><img
+                            src="https://www.dropbox.com/scl/fi/n3sf0cwycdacfloqwi1s4/luaLogo.png?rlkey=u5ckc3nhwl35jzqlqid0r1qh1&st=ioe7glva&raw=1"
+                            alt="" class="img-con"></div>
                     <h4>Lua / Luau</h4>
                 </div>
                 <div class="skill-card scroll-animate">
-                    <div class="skill-icon"><img src="https://www.dropbox.com/scl/fi/awf9ieivb7kmfhz13wffk/sqlLogo.png?rlkey=cnglvnmympr85re0hqwl5x0a5&st=rvzskqe4&dl=0https://www.dropbox.com/scl/fi/awf9ieivb7kmfhz13wffk/sqlLogo.png?rlkey=cnglvnmympr85re0hqwl5x0a5&st=rvzskqe4&raw=1" alt="" class="img-con"></div>
+                    <div class="skill-icon"><img
+                            src="https://www.dropbox.com/scl/fi/awf9ieivb7kmfhz13wffk/sqlLogo.png?rlkey=cnglvnmympr85re0hqwl5x0a5&st=rvzskqe4&dl=0https://www.dropbox.com/scl/fi/awf9ieivb7kmfhz13wffk/sqlLogo.png?rlkey=cnglvnmympr85re0hqwl5x0a5&st=rvzskqe4&raw=1"
+                            alt="" class="img-con"></div>
                     <h4>SQL</h4>
                 </div>
                 <div class="skill-card scroll-animate">
-                    <div class="skill-icon"><img src="https://www.dropbox.com/scl/fi/dqy8m3t1cm1o3s8sh32tk/phpLogo.png?rlkey=7nf4avxllo99vl8v6w5v1s5yv&st=ilnocaym&raw=1" alt="" class="img-con"></div>
+                    <div class="skill-icon"><img
+                            src="https://www.dropbox.com/scl/fi/dqy8m3t1cm1o3s8sh32tk/phpLogo.png?rlkey=7nf4avxllo99vl8v6w5v1s5yv&st=ilnocaym&raw=1"
+                            alt="" class="img-con"></div>
                     <h4>PHP</h4>
                 </div>
                 <div class="skill-card scroll-animate">
-                    <div class="skill-icon"><img src="https://www.dropbox.com/scl/fi/rsoiyi9tuqwzamvdc2h0r/rubiLogo.png?rlkey=eyfxfq9hvgcier62jlai03xdp&st=vsnky9ct&raw=1" alt="" class="img-con"></div>
+                    <div class="skill-icon"><img
+                            src="https://www.dropbox.com/scl/fi/hgjvxfwqclm30vwnq4yjb/rubyLogo.png?rlkey=af97qlkmuxvt2vhm7hm03a02n&st=zpe1n3jc&raw=1"
+                            alt="" class="img-con"></div>
                     <h4>Ruby</h4>
                 </div>
             </div>
@@ -270,7 +307,8 @@
                     <div class="project-content">
                         <h3 class="project-title" data-i18n="project1Title">Sistema de Monitoreo Vital IoT</h3>
                         <p class="project-desc" data-i18n="project1Desc">
-                            Plataforma completa de monitoreo cardiovascular y respiratorio en tiempo real utilizando Raspberry Pi, sensores especializados y visualización web interactiva.
+                            Plataforma completa de monitoreo cardiovascular y respiratorio en tiempo real utilizando
+                            Raspberry Pi, sensores especializados y visualización web interactiva.
                         </p>
                         <div class="project-tags">
                             <span class="project-tag">Raspberry Pi</span>
@@ -288,7 +326,8 @@
                     <div class="project-content">
                         <h3 class="project-title" data-i18n="project2Title">Propuesta Innovación GM</h3>
                         <p class="project-desc" data-i18n="project2Desc">
-                            Solución tecnológica innovadora presentada en el concurso de General Motors, enfocada en mejorar procesos de la industria automotriz mediante tecnología emergente.
+                            Solución tecnológica innovadora presentada en el concurso de General Motors, enfocada en
+                            mejorar procesos de la industria automotriz mediante tecnología emergente.
                         </p>
                         <div class="project-tags">
                             <span class="project-tag">Innovación</span>
@@ -305,7 +344,8 @@
                     <div class="project-content">
                         <h3 class="project-title" data-i18n="project3Title">Proyectos Web</h3>
                         <p class="project-desc" data-i18n="project3Desc">
-                            Desarrollo de múltiples aplicaciones web utilizando HTML, CSS, JavaScript y frameworks modernos. Enfoque en UX/UI y diseño responsivo.
+                            Desarrollo de múltiples aplicaciones web utilizando HTML, CSS, JavaScript y frameworks
+                            modernos. Enfoque en UX/UI y diseño responsivo.
                         </p>
                         <div class="project-tags">
                             <span class="project-tag">HTML5</span>
@@ -323,7 +363,8 @@
                     <div class="project-content">
                         <h3 class="project-title" data-i18n="project4Title">Sistemas de Gestión</h3>
                         <p class="project-desc" data-i18n="project4Desc">
-                            Aplicaciones de escritorio y bases de datos desarrolladas con VB.NET, C# y SQL Server para gestión empresarial y automatización de procesos.
+                            Aplicaciones de escritorio y bases de datos desarrolladas con VB.NET, C# y SQL Server para
+                            gestión empresarial y automatización de procesos.
                         </p>
                         <div class="project-tags">
                             <span class="project-tag">.NET</span>
@@ -340,7 +381,8 @@
                     <div class="project-content">
                         <h3 class="project-title" data-i18n="project5Title">Scripts y Automatización</h3>
                         <p class="project-desc" data-i18n="project5Desc">
-                            Desarrollo de scripts de automatización en Python, VBA y Lua para optimizar tareas repetitivas y mejorar la productividad.
+                            Desarrollo de scripts de automatización en Python, VBA y Lua para optimizar tareas
+                            repetitivas y mejorar la productividad.
                         </p>
                         <div class="project-tags">
                             <span class="project-tag">Python</span>
@@ -357,7 +399,8 @@
                     <div class="project-content">
                         <h3 class="project-title" data-i18n="project6Title">Más Proyectos en GitHub</h3>
                         <p class="project-desc" data-i18n="project6Desc">
-                            Explora mi repositorio completo de proyectos, contribuciones open source y experimentos de código en mi perfil de GitHub.
+                            Explora mi repositorio completo de proyectos, contribuciones open source y experimentos de
+                            código en mi perfil de GitHub.
                         </p>
                         <div class="project-tags">
                             <span class="project-tag">Open Source</span>
@@ -381,7 +424,9 @@
                 <h3 data-i18n="eduTitle">Técnico Analista Programador</h3>
                 <p class="text-secondary mb-2">Liceo Comercial Vate Vicente Huidobro</p>
                 <p data-i18n="eduDesc">
-                    Actualmente cursando 2° año de la especialidad de Técnico Analista Programador. Formación integral en desarrollo de software, bases de datos, programación orientada a objetos, desarrollo web y tecnologías emergentes.
+                    Actualmente cursando 2° año de la especialidad de Técnico Analista Programador. Formación integral
+                    en desarrollo de software, bases de datos, programación orientada a objetos, desarrollo web y
+                    tecnologías emergentes.
                 </p>
                 <div class="mt-3">
                     <span class="project-tag">En Curso</span>
@@ -413,7 +458,8 @@
                 &copy; 2024 Marcell Jofré Figueroa. Todos los derechos reservados.
             </p>
             <p class="mt-2" style="font-size: 0.9rem; opacity: 0.7;">
-                <span data-i18n="madeWith">Hecho con</span> ❤️ <span data-i18n="using">usando</span> HTML, CSS, JavaScript & Bootstrap
+                <span data-i18n="madeWith">Hecho con</span><span data-i18n="using">usando</span> HTML, CSS, JavaScript &
+                Bootstrap
             </p>
         </div>
     </footer>
@@ -421,4 +467,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script src="/static/js/main.js"></script>
 </body>
+
 </html>
